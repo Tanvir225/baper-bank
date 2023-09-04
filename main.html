@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baper-Bank</title>
+    <link rel="shortcut icon" href="images/star-regular.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="font-mono container mx-auto">
+    <header class="mt-10">
+        <figure class="text-center">
+            <div class="avatar">
+                <div class="w-24 mask mask-hexagon">
+                  <img src="images/tanvir.jpg">
+                </div>
+              </div>
+        </figure>
+        <h1 class="text-3xl font-extrabold text-center">Welcome to <span class="text-yellow-500 text-5xl font-semibold"> Dashboard!</span></h1>
+    </header>
+    <main class="mt-10 w-9/12 mx-auto">
+        <section class="grid gap-4 grid-cols-1 lg:grid-cols-3">
+            <div class="bg-green-600 p-8 text-white space-y-3 rounded-lg">
+                <h3 class="text-3xl font-bold">Deposite</h3>
+                <p class="text-6xl" >$<span id="total-deposite">00</span></p>
+            </div>
+            <div class="bg-red-600 p-8 text-white space-y-3 rounded-lg">
+                <h3 class="text-3xl font-bold">withdraw</h3>
+                <p class="text-6xl">$ <span id="total-withdraw">00</span></p>
+            </div>
+            <div class="bg-violet-600 p-8 text-white space-y-3 rounded-lg">
+                <h3 class="text-3xl font-bold">Balance</h3>
+                <p class="text-6xl">$<span id="tbalance">100</span></p>
+            </div>
+        </section >
+
+        <section class="grid grid-cols-1 gap-4 mt-10 lg:grid-cols-2">
+            <div class=" space-y-3 bg-green-600 p-8 rounded-lg ">
+                <h2 class="text-2xl font-semibold  text-white lg:text-center">please enter deposite amount:</h2>
+                <div class="space-y-3">
+                    <input type="text" name="" id="deposite" class="block w-full  h-10 rounded-lg px-5 lg:w-9/12 lg:ml-3" placeholder="deposite amount">
+
+                    <button class="bg-blue-600 hover:bg-slate-700 text-white rounded-lg px-5 py-2 block lg:ml-3" id="deposite-btn">deposite</button>
+                </div>
+            </div>
+            <div class=" space-y-3 bg-red-600 p-8 rounded-lg ">
+                <h2 class="text-2xl font-semibold  text-white lg:text-center">please enter withdraw amount:</h2>
+                <div class="space-y-3">
+                    <input type="text" name="" id="withdraw" class="block w-full  h-10 rounded-lg px-5 lg:ml-3 lg:w-9/12" placeholder="withdraw amount">
+
+                    <button class="bg-blue-600 hover:bg-slate-700 text-white rounded-lg px-5 py-2 block lg:ml-3" id="withdraw-btn">withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/cal.js"></script>
+</body>
+</html>
