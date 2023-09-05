@@ -32,19 +32,19 @@ withdrawButton.addEventListener('click',function() {
     }
     withdrawElement.value = ''
     const a = document.getElementById('total-withdraw');
-
-    var x = 0;
-    var y =0;
+    const tBalance = document.getElementById('tbalance');
+    var x =0;
+    var y = 0;
     x = parseFloat(withdrawValue);
-    y = parseFloat(a.innerText);
+    y= parseFloat(tBalance.innerText)
     if (x>y) {
-        alert("you don't have sufficient balance!");
+        alert("you don't have sufficient balance");
         return;
     }
     var wTotal=0;
     wTotal = parseFloat(a.innerText) + parseFloat(withdrawValue);
     a.innerText = wTotal;
-    const tBalance = document.getElementById('tbalance');
+  
     const withdrawAfterB = parseFloat(tBalance.innerText-parseFloat(withdrawValue));
     tBalance.innerText = withdrawAfterB;
 
