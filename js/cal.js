@@ -4,6 +4,11 @@ document.getElementById('deposite-btn').addEventListener('click',function () {
     console.log(depositeValue);
 
     const totalElement = document.getElementById('total-deposite');
+    depositeElement.value = ''
+    if (isNaN(parseFloat(depositeValue))) {
+        alert('you need to input a number');
+        return;
+    }
     var total =0;
     total = parseInt(totalElement.innerText)+parseInt(depositeValue);
     totalElement.innerText =total;
@@ -21,12 +26,26 @@ withdrawButton.addEventListener('click',function() {
     const withdrawValue = withdrawElement.value;
     //console.log(withdrawValue)
     withdrawElement.value = ''
+    if (isNaN(parseFloat(withdrawValue))) {
+        alert('you need to input a number');
+        return;
+    }
+    withdrawElement.value = ''
     const a = document.getElementById('total-withdraw');
+
+    var x = 0;
+    var y =0;
+    x = parseFloat(withdrawValue);
+    y = parseFloat(a.innerText);
+    if (x>y) {
+        alert("you don't have sufficient balance!");
+        return;
+    }
     var wTotal=0;
-    wTotal = parseInt(a.innerText) + parseInt(withdrawValue);
+    wTotal = parseFloat(a.innerText) + parseFloat(withdrawValue);
     a.innerText = wTotal;
     const tBalance = document.getElementById('tbalance');
-    const withdrawAfterB = parseInt(tBalance.innerText-parseInt(withdrawValue));
+    const withdrawAfterB = parseFloat(tBalance.innerText-parseFloat(withdrawValue));
     tBalance.innerText = withdrawAfterB;
 
 
